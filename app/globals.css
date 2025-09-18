@@ -2,7 +2,7 @@ body {
   position: relative;
   min-height: 100vh;
   margin: 0;
-  background: linear-gradient(135deg, #cb1111, #25fc98);
+  background: #213744;
   background-attachment: fixed;
 }
 
@@ -66,11 +66,11 @@ main {
 }
 
 .cross {
-  color: #25fc98;
+  color: #ffbb74;
 }
 
 .circle {
-  color: #cb1111;
+  color: #a8e8ff;
 }
 
 p {
@@ -111,7 +111,7 @@ p {
 }
 
 .restart-button.winning {
-  background: linear-gradient(135deg, #25fc98, #cb1111);
+  background: #f1c50c;
   border-color: #ffffff;
   animation: pulse 2s infinite;
 }
