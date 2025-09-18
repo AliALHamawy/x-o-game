@@ -11,7 +11,7 @@ type CellProps = {
 }
 
 const Cell = ({ go, setGo, id, cells, setCells, cell, winningMessage }: CellProps) => {
-    const handleClick = (e) => {
+    const handleClick = () => {
         if (winningMessage) {
             return;
         }
