@@ -28,7 +28,7 @@ const Cell = ({ go, setGo, id, cells, setCells, cell, winningMessage }: CellProp
         }
     }
     const handelCellChange = (cellToChange: string) => {
-        let copyCells = [...cells];
+        const copyCells = [...cells];
         copyCells[id] = cellToChange;
         setCells(copyCells);
     }
