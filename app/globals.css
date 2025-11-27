@@ -1,0 +1,131 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  background: #213744;
+  background-attachment: fixed;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(100px);
+  border-radius: 13px;
+}
+
+.container>div:first-child {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(16px, 2.5vmin, 20px);
+  letter-spacing: 0.4px;
+  margin-bottom: 10px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
+  gap: 8px;
+  width: min(92vmin, 520px);
+  aspect-ratio: 1 / 1;
+}
+
+.square {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  border: 1px solid white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.5s ease;
+  border-radius: 9px;
+}
+
+.square:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cross,
+.circle {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.cross {
+  color: #ffbb74;
+}
+
+.circle {
+  color: #a8e8ff;
+}
+
+p {
+  color: #fff;
+}
+
+.link {
+  text-decoration: none;
+  color: #f1c50c;
+}
+
+.restart-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.restart-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.restart-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.restart-button.winning {
+  background: #f1c50c;
+  border-color: #ffffff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
